@@ -1,13 +1,11 @@
 # ASP.NET
 # Build and test ASP.NET projects.
 # Add steps that publish symbols, save build artifacts, deploy, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/apps/aspnet/build-aspnet-4123
+# https://docs.microsoft.com/azure/devops/pipelines/apps/aspnet/build-aspnet-4123y
 
 
 variables:
-  solution: '**/*.sln'
-  buildPlatform: 'Any CPU'
-  buildConfiguration: 'Release'
+ - group: a
 
 steps:
 - task: NuGetToolInstaller@0
@@ -17,8 +15,8 @@ steps:
     restoreSolution: '$(solution)'
     
 - task: AzureResourceGroupDeployment@2
-  displayName: 'Azure Deployment:Satart action on ankhokha-update'
+  displayName: 'Azure Deployment:Start action on ankhokha-update'
   inputs:
-    azureSubscription: 'ARM-aksriv'
+    azureSubscription: 'b'
     action: Start
     resourceGroupName: 'ankhokha-update'
