@@ -5,7 +5,7 @@
 
 
 variables:
- - group: a
+ - group: ffonoff
 
 steps:
 - task: NuGetToolInstaller@0
