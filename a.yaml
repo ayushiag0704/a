@@ -9,14 +9,3 @@ variables:
 
 steps:
 - task: NuGetToolInstaller@0
-
-- task: NuGetCommand@2
-  inputs:
-    restoreSolution: '$(solution)'
-    
-- task: AzureResourceGroupDeployment@2
-  displayName: 'Azure Deployment:Start action on ankhokha-update'
-  inputs:
-    azureSubscription: 'b'
-    action: Start
-    resourceGroupName: 'ankhokha-update'
